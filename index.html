@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+<!--CSS-->
+<link rel = "stylesheet" href = "style.css"> 
+    <title>uLearn - professional learning</title>
+  </head>
+  <body>
+
+
+    <!--NAV BAR-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="img/logo1.png" alt="" width="60" height="40" class="d-inline-block align-text-top">
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Courses
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="medical.html">Medical</a></li>
+                <li><a class="dropdown-item" href="engineering.html">Engineering</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#">Others</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact Us</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-danger" type="submit">
+              Search
+            </button>
+          </form>
+          <div class="mx-2">
+            <button class="btn btn btn-css" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
+            <button class="btn btn btn-css" data-bs-toggle="modal" data-bs-target="#signupModal">Sign Up</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    
+    <!--SignUp Modal-->
+  
+
+<!--Login Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="loginModalLabel">Log in</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1">
+          </div>
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+          </div>
+          <button type="submit" class="btn btn btn-css">Login In</button>
+        </form>
+      </div>
+     
+    </div>
+  </div>
+</div>
+
+<!--Signup modal-->
+<div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="signupModalLabel">Get a uLearn account</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form class="">
+          <div class="form-floating mb-3">
+            <input type="email" class="form-control rounded-4" id="floatingInput" placeholder="name@example.com">
+            <label for="floatingInput">Email address</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="password" class="form-control rounded-4" id="floatingPassword" placeholder="Password">
+            <label for="floatingPassword">Password</label>
+          </div>
+          <button class="w-100 mb-2 btn btn-lg rounded-4 btn-css" type="submit">Sign up</button>
+          <small class="text-muted">By clicking Sign up, you agree to the terms of use.</small>
+          <hr class="my-4">
+          <h2 class="fs-5 fw-bold mb-3">Or use a third-party</h2>
+          <button class="w-100 py-2 mb-2 btn btn-outline-dark rounded-4" type="submit">
+            <svg class="bi me-1" width="16" height="16"><use xlink:href="#twitter"></use></svg>
+            Sign up with Twitter
+          </button>
+          <button class="w-100 py-2 mb-2 btn btn-outline-primary rounded-4" type="submit">
+            <svg class="bi me-1" width="16" height="16"><use xlink:href="#facebook"></use></svg>
+            Sign up with Facebook
+          </button>
+          <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-4" type="submit">
+            <svg class="bi me-1" width="16" height="16"><use xlink:href="#github"></use></svg>
+            Sign up with GitHub
+          </button>
+        </form>
+        
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+    <!--Slider-->
+    <div
+      id="carouselExampleCaptions"
+      class="carousel slide carousel-fade"
+      data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="/img/slider-1.jpg" class="d-block w-100" alt="..." />
+          <div class="carousel-caption d-none d-md-block">
+            <button class="btn btn-css">Circuit Analysis</button>
+            <button class="btn btn-css">Web Development</button>
+            <button class="btn btn-css">Projects </button>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://source.unsplash.com/1400x400/?doctor,medical" class="d-block w-100" alt="..." />
+          <div class="carousel-caption d-none d-md-block">
+           
+            <button class="btn btn-css">Circuit Analysis</button>
+            <button class="btn btn-css">Web Development</button>
+            <button class="btn btn-css">Projects </button>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://source.unsplash.com/1400x400/?engineer,electrical" class="d-block w-100" alt="..." />
+          <div class="carousel-caption d-none d-md-block">
+            <button class="btn btn-css">Circuit Analysis</button>
+            <button class="btn btn-css">Web Development</button>
+            <button class="btn btn-css">Projects </button>
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <!--card-->
+    <div class="container">
+    <div class="row  my-4 mb-2">
+        <div class="col-md-6">
+          <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-primary">World</strong>
+              <h3 class="mb-0">Join Coummunity</h3>
+              <div class="mb-1 text-muted">Nov 12</div>
+              <p class="card-text mb-auto">Join our community to learn how uLearn actully works.</p>
+              <a href="#" class="stretched-link">Continue reading</a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+<img class="bd-placeholder-img" width="200" height="250" src="img/thumb-1.jpg">    
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-success">Design</strong>
+              <h3 class="mb-0">Web Design</h3>
+              <div class="mb-1 text-muted">Nov 11</div>
+              <p class="mb-auto">Having trouble in coding? Be eager to ask other members</p>
+              <a href="#" class="stretched-link">Continue reading</a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+                <img class="bd-placeholder-img" width="200" height="250" src="img/thumb-2.jpg">    
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mb-2">
+        <div class="col-md-6">
+          <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-primary">News</strong>
+              <h3 class="mb-0">IEEE</h3>
+              <div class="mb-1 text-muted">Oct 3</div>
+              <p class="card-text mb-auto">Get latest information about Technology and Engineering.</p>
+              <a href="#" class="stretched-link">Continue reading</a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+<img class="bd-placeholder-img" width="200" height="250" src="img/thumb-3.jpg">    
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-success">Find</strong>
+              <h3 class="mb-0">Medicine</h3>
+              <div class="mb-1 text-muted">Yesterday</div>
+              <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+              <a href="#" class="stretched-link">Continue reading</a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+                <img class="bd-placeholder-img" width="200" height="250" src="img/thumb-4.jpg">    
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+<!--Pricing-->
+
+    
+    <!-- Custom styles for this template -->
+  <div class="container">
+    <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+      <h1 class="display-4 fw-normal">Pricing</h1>
+      <p class="fs-5 text-muted">Quickly build an effective pricing table for your potential customers with this Bootstrap example. It’s built with default Bootstrap components and utilities with little customization.</p>
+    </div>
+  </header>
+
+  <main>
+    <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">Free</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">$0<small class="text-muted fw-light">/month</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>1 user included</li>
+              <li>Limited content</li>
+              <li>Email support</li>
+              <li>Help center access</li>
+            </ul>
+            <button type="button" class="w-100 btn btn-lg btn-css">Sign up for free</button>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">Pro</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">$15<small class="text-muted fw-light">/month</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>5 users included</li>
+              <li>Limited Access</li>
+              <li>Priority email support</li>
+              <li>Help center access</li>
+            </ul>
+            <button type="button" class="w-100 btn btn-lg btn-css">Get started</button>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm border-css">
+          <div class="card-header py-3 text-white btn-css border-css">
+            <h4 class="my-0 fw-normal">Enterprise</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">$29<small class="text-muted fw-light">/month</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>8 users included</li>
+              <li>Access to premium content</li>
+              <li>Phone and email support</li>
+              <li>Help center access</li>
+            </ul>
+            <button type="button" class="w-100 btn btn-lg btn-css">Contact us</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Features-->
+  <div class="container px-4 py-5" id="hanging-icons">
+    <h2 class="pb-2 border-bottom">Features</h2>
+    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+      <div class="col d-flex align-items-start">
+        <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
+          <svg class="bi" width="1em" height="1em"><use xlink:href="#toggles2"></use></svg>
+        </div>
+        <div>
+          <h2>Counselling</h2>
+          <p>Do you wanna know if your career suits your interest?You can talk with our experienced consultants and you must have to subscribe our interprise package</p>
+          <a href="#" class="btn btn-css">
+            Start
+          </a>
+        </div>
+      </div>
+      <div class="col d-flex align-items-start">
+        <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
+          <svg class="bi" width="1em" height="1em"><use xlink:href="#cpu-fill"></use></svg>
+        </div>
+        <div>
+          <h2>Certification</h2>
+          <p>You should know how our education system works and you may get a certification if you are willing to take our exam,certification is valid throughout the world.</p>
+          <a href="#" class="btn btn-css">
+            Find Out
+          </a>
+        </div>
+      </div>
+      <div class="col d-flex align-items-start">
+        <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
+          <svg class="bi" width="1em" height="1em"><use xlink:href="#tools"></use></svg>
+        </div>
+        <div>
+          <h2>Groups</h2>
+          <p>We have several groups across the globe. You can join the one which best suits your learning or be a guiding light to other members</p>
+          <a href="#" class="btn btn-css">
+            Join Us
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+      <!--Footer-->
+    <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+          <div class="col-md-4 d-flex align-items-center">
+            <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+              <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+            </a>
+            <span class="text-muted">© 2017-2021 uLearn, Inc</span>
+          </div>
+      
+          <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+            <li href="#"><a><ion-icon name="logo-facebook" size ="large"></ion-icon></a></li>
+            <li class="ms-3"><a><ion-icon name="logo-instagram" size="large"></ion-icon></a></li>
+            <li class="ms-3"><a><ion-icon name="logo-twitter" size="large"></ion-icon></a></li>
+          </ul>
+        </footer>
+      </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>

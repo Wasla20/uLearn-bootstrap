@@ -1,0 +1,21 @@
+$btn-color :#9b59b6;
+$btn-hover-color:#c6a0d5;
+
+.btn-css{
+    background-color: $btn-color;
+    border: none;
+    color: #fff;
+}
+
+.btn-css:hover{
+    background-color: $btn-hover-color;
+}
+.btn-outline-dark:hover,
+.btn-outline-primary:hover,
+.btn-outline-secondary:hover{
+    background-color: $btn-color;
+}
+.ontainer .card .bg-css .border-css{
+    color: $btn-color;
+    background-color: $btn-color;
+}

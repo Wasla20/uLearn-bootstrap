@@ -1,0 +1,21 @@
+.btn-css {
+  background-color: #9b59b6;
+  border: none;
+  color: #fff;
+}
+
+.btn-css:hover {
+  background-color: #c6a0d5;
+}
+
+.btn-outline-dark:hover,
+.btn-outline-primary:hover,
+.btn-outline-secondary:hover {
+  background-color: #9b59b6;
+}
+
+.ontainer .card .bg-css .border-css {
+  color: #9b59b6;
+  background-color: #9b59b6;
+}
+/*# sourceMappingURL=style.css.map */
